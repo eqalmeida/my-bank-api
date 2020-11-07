@@ -11,6 +11,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/account', accountRouter);
 
+app.get('/', async (req, res) => {
+  res.json({ message: 'Hello' });
+});
+
 const TCP_PORT = process.env.TCP_PORT || 3000;
 
 app.listen(process.env.PORT || TCP_PORT, () => {
