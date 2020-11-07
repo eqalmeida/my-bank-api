@@ -13,6 +13,6 @@ app.use('/account', accountRouter);
 
 const TCP_PORT = process.env.TCP_PORT || 3000;
 
-app.listen(TCP_PORT, () => {
+app.listen(process.env.PORT || TCP_PORT, () => {
   console.log('App running on port ' + TCP_PORT);
 });
